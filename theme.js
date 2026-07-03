@@ -1,9 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const switchBtn = document.getElementById("darkModeSwitch");
 
-    if (!switchBtn) return;
+    if (!switchBtn) {
+        console.log("Switch no encontrado");
+        return;
+    }
 
-    switchBtn.addEventListener("change", function () {
+    switchBtn.addEventListener("change", () => {
         document.body.classList.toggle("dark");
     });
 });

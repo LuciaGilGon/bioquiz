@@ -14,6 +14,7 @@
             margin: 0;
         }
 
+        /* NAVBAR */
         .custom-navbar {
             background: #e9ecef;
             padding: 10px 15px;
@@ -39,6 +40,65 @@
             background: #222;
             border-bottom: 1px solid #333;
         }
+
+        body.dark .brand {
+            color: white !important;
+        }
+
+        /* TÍTULO */
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: gray;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* CUADRADOS */
+        .card-box {
+            background: #d7f5f0;
+            border-radius: 15px;
+            height: 180px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            text-decoration: none;
+            color: black;
+
+            transition: 0.2s;
+        }
+
+        .card-box:hover {
+            transform: translateY(-6px);
+        }
+
+        .emoji {
+            font-size: 60px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        body.dark .card-box {
+            background: #2a4f4a;
+            color: white;
+        }
     </style>
 </head>
 
@@ -52,14 +112,64 @@
     </div>
 
     <!-- CONTENIDO -->
-    <div class="container mt-5">
-        <h2>Zoología</h2>
-        <p>Aquí irán los tests de animales 🐙</p>
+    <h1>Zoología</h1>
+
+    <p class="subtitle">
+        Explora los principales grupos de animales y practica su identificación
+    </p>
+
+    <div class="grid">
+
+        <a href="cnidarios.html" class="card-box">
+            <div>
+                <span class="emoji">🪼</span>
+                <h4>Cnidarios</h4>
+            </div>
+        </a>
+
+        <a href="artropodos.html" class="card-box">
+            <div>
+                <span class="emoji">🐛</span>
+                <h4>Artrópodos</h4>
+            </div>
+        </a>
+
+        <a href="moluscos.html" class="card-box">
+            <div>
+                <span class="emoji">🐚</span>
+                <h4>Moluscos</h4>
+            </div>
+        </a>
+
+        <a href="anelidos.html" class="card-box">
+            <div>
+                <span class="emoji">🪱</span>
+                <h4>Anélidos</h4>
+            </div>
+        </a>
+
+        <a href="equinodermos.html" class="card-box">
+            <div>
+                <span class="emoji">⭐</span>
+                <h4>Equinodermos</h4>
+            </div>
+        </a>
+
+        <a href="cordados.html" class="card-box">
+            <div>
+                <span class="emoji">🐟</span>
+                <h4>Cordados</h4>
+            </div>
+        </a>
+
     </div>
 
+    <!-- JS MODO OSCURO -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const sw = document.getElementById("darkModeSwitch");
+
+            if (!sw) return;
 
             sw.addEventListener("change", () => {
                 document.body.classList.toggle("dark");
