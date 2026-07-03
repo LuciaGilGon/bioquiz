@@ -1,0 +1,57 @@
+body {
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    background-color: #e9ecef;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: black;
+}
+
+/* CUADRADOS */
+.card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 120px;
+    background-color: #d7f5f0;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+    transition: 0.2s;
+}
+
+.card-box:hover {
+    transform: scale(1.05);
+}
+
+/* MODO OSCURO */
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark .custom-navbar {
+    background-color: #1f1f1f;
+    border-bottom: 1px solid #333;
+}
+
+body.dark .brand {
+    color: white;
+}
+
+body.dark .card-box {
+    background-color: #2a4f4a;
+    color: white;
+}
